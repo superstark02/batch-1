@@ -7,7 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../_dist'),
-    filename: 'my-first-webpack.bundle.js',
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -23,6 +23,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'My website',
+      template: './templates/client.html',
     }),
   ],
   mode: 'development',
